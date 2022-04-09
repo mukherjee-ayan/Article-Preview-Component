@@ -1,0 +1,308 @@
+
+:root {
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--lightGrayishBlue);
+  margin: auto;
+}
+
+main {
+  background-color: white;
+  border-radius: 1rem;
+  margin: 5rem auto;
+  width: 22.7rem;
+}
+
+/* Drawer Image */
+
+.image-drawer {
+  width: 22.7rem;
+  height: auto;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.image-drawer img {
+  width: 22.7rem;
+  height: auto;
+  margin: 0 0 -4rem;
+}
+
+/* Content */
+
+.main-body {
+  padding: 2rem 1.5rem 1rem;
+  color: var(--veryDarkGrayishBlue);
+}
+
+.main-body h3 {
+  font-weight: bold;
+}
+
+.main-body p {
+  color: var(--desaturatedDarkBlue);
+}
+
+/* Publishing Info */
+
+.publishing-detail {
+  position: relative;
+  width: 21rem;
+  height: 5rem;
+}
+
+.author-info {
+  height: 5rem;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
+}
+
+.image-author {
+  border-radius: 50%;
+  width: 3rem;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5rem;
+}
+
+.name-author {
+  width: 10rem;
+  display: inline-block;
+  position: absolute;
+  font-weight: bold;
+  color: var(--veryDarkGrayishBlue);
+  left: 6rem;
+  top: 1rem;
+  margin: 0;
+}
+
+.publish-date {
+  width: 10rem;
+  display: inline-block;
+  position: absolute;
+  color: var(--desaturatedDarkBlue);
+  left: 6rem;
+  bottom: 1rem;
+  margin: 0;
+}
+
+.icon-share{
+  border-radius: 50%;
+  width: 1rem;
+  padding: 0.5rem;
+  background-color: var(--lightGrayishBlue);
+  color: var(--desaturatedDarkBlue);
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+/* Share Info */
+
+.share {
+  background-color: var(--veryDarkGrayishBlue);
+  text-align: center;
+  height: 5rem;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
+}
+
+.share p {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  left: 1.5rem;
+  color: var(--grayishBlue);
+  text-transform: uppercase;
+  letter-spacing: 0.375rem;
+}
+
+.share img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.facebook-icon {
+  left: 7.5rem;
+  width: 1.5rem;
+}
+
+.twitter-icon {
+  left: 10.25rem;
+  width: 1.5rem;
+}
+
+.pinterest-icon {
+  left: 13rem;
+  width: 1.5rem;
+}
+
+.share-icon {
+  border-radius: 50%;
+  width: 1rem;
+  padding: 0.5rem;
+  background-color: var(--desaturatedDarkBlue);
+  color: var(--lightGrayishBlue);
+  right: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Share Popover used in desktop version, set to none in mobile version */
+.popover {
+  display: none;
+}
+
+/* Class for hiding an element */
+.hide {
+  display: none;
+}
+
+/* For desktop version */
+@media (min-width: 991px) {
+
+  main {
+    width: 43.8rem;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  /* Wrapper Component */
+  .component {
+    width: 25rem;
+    height: 17rem;
+    display: inline-block;
+    position: relative;
+  }
+
+  /* Drawer Image */
+
+  .image-drawer {
+    width: 18.5rem;
+    height: 17rem;
+    overflow: hidden;
+    border-radius: 1rem 0 0 1rem;
+    float: left;
+  }
+
+  .image-drawer img {
+    width: 22.7rem;
+    height: 17rem;
+    margin: 0 -4rem 0 0;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .main-body{
+    padding-bottom: 0;
+  }
+
+  .main-body p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .author-info {
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  /* Class to change the color of share button when popover is active */
+  .popover-active {
+    background-color: var(--desaturatedDarkBlue);
+    color: var(--lightGrayishBlue);
+  }
+
+  /* Share used in mobile version, set to none in desktop version */
+  .share {
+    display: none;
+  }
+
+  /* Class for unhiding an element */
+  .show {
+    display: block;
+  }
+
+  /* Share Popover */
+  .popover {
+    background-color: var(--veryDarkGrayishBlue);
+    position: absolute;
+    height: 3.3rem;
+    width: 17rem;
+    border-radius: 0.5rem;
+    left: 13.5rem;
+    top: 8rem;
+  }
+
+  /* Kink in the popover */
+  .popover::after {
+    position:absolute;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: var(--veryDarkGrayishBlue);
+    top: 2.75rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: rotate(45deg);
+  }
+
+  .popover p {
+    display: inline;
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    letter-spacing: 0.375rem;
+    margin: 0;
+    position: absolute;
+    top: 1.1rem;
+    left: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .popover img {
+    margin: 1rem 0.5rem;
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .popover-fb {
+    left: 7rem;
+  }
+
+  .popover-tweet {
+    left: 9.5rem;
+  }
+
+  .popover-pint {
+    left: 12rem;
+  }
+
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
